@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD com.example.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanshiqi.mapper.BookMapper">
+    <resultMap id="book" type="com.lanshiqi.domain.Book">
+        <result property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="password" column="password"/>
+
+    </resultMap>
+
+    <select id="getBooks" resultMap="book">
+        SELECT * FROM book
+    </select>
+
+
+    <select id="getBooksByPage" resultMap="book">
+        SELECT * FROM book
+    </select>
+
+</mapper>
